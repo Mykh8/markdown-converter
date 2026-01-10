@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+.log
+.env
+.env.*
+out/
+target/
+TODO

@@ -1,0 +1,7 @@
+TODO
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Check whether user passes valid .md and .html files
+2. Parse markdown file and create an html file with the provided name
+3. Convert it to html
+4. Write html in html file
