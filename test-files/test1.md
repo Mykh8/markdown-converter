@@ -1,3 +1,0 @@
-# TEST 1
-
-> QUOTE RIGHT THERE

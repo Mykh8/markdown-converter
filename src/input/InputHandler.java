@@ -5,8 +5,7 @@ import java.nio.file.Path;
 
 public class InputHandler {
 
-    private static final String USAGE =
-            "Usage: java Main <input.md> <output.html>";
+    private static final String USAGE = "Usage: java Main <input.md> <output.html>";
 
     public boolean isValidAmountOfArgs(int argsAmount) {
         if (argsAmount != 2) {

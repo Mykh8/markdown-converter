@@ -8,3 +8,5 @@ Thumbs.db
 out/
 target/
 TODO
+*.class
+*.jar

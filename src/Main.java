@@ -1,4 +1,9 @@
+import converter.HtmlConverter;
 import input.InputHandler;
+import parser.MarkdownParser;
+
+import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +24,10 @@ public class Main {
             return;
         }
 
-        System.out.println("Good!");
+        MarkdownParser markdownParser = new MarkdownParser(inputFile);
+        ArrayList<String> parsedList = markdownParser.parseFile();
+
+        HtmlConverter htmlConverter = new HtmlConverter(outputFile);
+        htmlConverter.convertToHtml(parsedList);
     }
 }
