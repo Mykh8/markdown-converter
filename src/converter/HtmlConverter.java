@@ -16,7 +16,7 @@ public class HtmlConverter {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>HTML 5 Boilerplate</title>
+            <title>%s</title>
             <link rel="stylesheet" href="style.css">
           </head>
           <body>
@@ -34,16 +34,19 @@ public class HtmlConverter {
     }
 
     public void convertToHtml(ArrayList<String> parsedList) {
-        Path path = Paths.get(htmlFilePath);
+        Path path = Paths.get(htmlFilePath).toAbsolutePath();
+
+        String title = path.getFileName().toString().replaceFirst("\\.html$", "");
 
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {
-            writer.write(HTML_HEAD);
+            writer.write(HTML_HEAD.formatted(title));
             for (String line : parsedList) {
                 writer.write("        ");
                 writer.write(line);
                 writer.newLine();
             }
             writer.write(HTML_FOOT);
+            System.out.println("HTML file successfully written at: " + path);
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
