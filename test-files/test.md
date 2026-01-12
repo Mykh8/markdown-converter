@@ -14,7 +14,7 @@ paragraph text
 
 **Bold text** and __another bold text__
 
-*italic text* and *another italic text*
+*italic text* and _another italic text_
 
 > quote text
 
